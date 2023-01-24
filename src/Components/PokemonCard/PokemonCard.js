@@ -10,13 +10,13 @@ const PokemonCard = (props) => {
     }
     
   return (
-    <Card color={}>
-        <img src={} alt={`Pokemon`}/>
-        <PokemonName>{}</PokemonName>
-        <PokemonType>{}</PokemonType>
-        <p>{}kg</p>
+    <Card color={props.cor}>
+        <img src={props.img} alt={`Pokemon`}/>
+        <PokemonName>{props.nome}</PokemonName>
+        <PokemonType>{props.tipo}</PokemonType>
+        <p>{props.peso}kg</p>
 
-        <EvolveButton onClick={() => evoluirPokemon()}>Evoluir!</EvolveButton>
+        <EvolveButton onClick={props.mudaPokemon/*() => evoluirPokemon()*/}>Evoluir!</EvolveButton>
     </Card>
   )
 }
